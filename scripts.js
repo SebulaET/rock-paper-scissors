@@ -1,5 +1,7 @@
 // Declare choices
 const choices = ["rock", "paper", "scissors"];
+let humanScore = (0);
+let computerScore = (0);
 
 function getComputerChoice() {
     return choices [Math.floor(Math.random()*choices.length)];
@@ -7,6 +9,14 @@ function getComputerChoice() {
     // declare options for computer
     // return one and only one answer
 }
+
+function getPlayerChoice(choice) {
+    let playerChoice = prompt("Choose Rock, Paper, or Scissors!");
+    playerChoice = playerChoice.toLowerCase();
+    console.log("You chose " + playerChoice + "!");
+}
+
+console.log(getPlayerChoice());
 
 
 // Get input from player for their choice
