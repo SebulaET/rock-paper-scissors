@@ -1,8 +1,16 @@
-// Generate random result between Rock, Paper, Scissors from computer
+// Declare choices
+const choices = ["rock", "paper", "scissors"];
+
+function getComputerChoice() {
+    return choices [Math.floor(Math.random()*choices.length)];
+    // Generate random result between Rock, Paper, Scissors from computer
+    // declare options for computer
+    // return one and only one answer
+}
+
 
 // Get input from player for their choice
-
-// Return a value of Rock, Paper, or Scissors
+    // return a value of Rock, Paper, or Scissors
 
 // Keep track of score
 
