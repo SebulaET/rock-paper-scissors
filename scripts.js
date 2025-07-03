@@ -10,13 +10,18 @@ function getComputerChoice() {
     // return one and only one answer
 }
 
-function getPlayerChoice(choice) {
-    let playerChoice = prompt("Choose Rock, Paper, or Scissors!");
-    playerChoice = playerChoice.toLowerCase();
-    console.log("You chose " + playerChoice + "!");
+function getPlayerChoice() {
+    let playerInput = prompt("Choose Rock, Paper, or Scissors!");
+    playerInput = playerInput.toLowerCase();
+    console.log("You chose " + playerInput + "!");
 }
 
-console.log(getPlayerChoice());
+function playRound(playerChoice, computerChoice) {
+    // YOU ARE HERE (Step 5)
+}
+
+const playerChoice = getPlayerChoice();
+const computerChoice = getComputerChoice();
 
 
 // Get input from player for their choice
