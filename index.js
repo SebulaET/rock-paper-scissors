@@ -6,6 +6,28 @@ function getComputerChoice(){
     return choice;
 }
 
+  // Get input from player for their choice per round
+    // ask the player for their choice
+    // retain their answer.
+function getPlayerChoice(){
+    let validatedInput = false;
+    while(validatedInput == false){
+        const choice = prompt("Rock, Paper, or Scissors?");
+        if(choice == null){
+            continue;
+        }
+        // convert to lower case
+        const choiceInLower = choice.toLowerCase();
+        // if choiceInLower includes rock/paper/scissors...
+        if(options.includes(choiceInLower)){
+            // change to true
+            validatedInput = true;
+            // return the converted player input
+            return choiceInLower;
+        }
+}
+}
+
 function checkWinner(playerSelection, computerSelection){
      // Determine a winner.
     if(playerSelection == computerSelection){
@@ -43,10 +65,10 @@ function game(){
     console.log("Let's play!");
     // loop five times.
     for (let i = 0; i < 5; i++){
-        const playerSelection = "rock";
+        const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection,computerSelection));
     }       
 }
 
-game()
+game();
