@@ -62,6 +62,8 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
+    let scorePlayer = 0;
+    let scoreComputer = 0;
     console.log("Let's play!");
     // loop five times.
     for (let i = 0; i < 5; i++){
@@ -69,6 +71,22 @@ function game(){
         const computerSelection = getComputerChoice();
         console.log(playRound(playerSelection,computerSelection));
     }       
+    if (checkWinner(playerSelection,computerSelection) == "Player"){
+        scorePlayer++
+    }
+    else if (checkWinner(playerSelection,computerSelection) == "Computer"){
+        scoreComputer++
+    }
+    if (scorePlayer > 2) {
+        console.log("You win the game!!");
+    }
+    else if (scoreComputer > 2) {
+        console.log("You lost the game... :(");
+    }
+    else {
+        console.log("Tie...");
+    }
 }
 
 game();
+// Need to figure out determining the winner. Why no score being kept here?
