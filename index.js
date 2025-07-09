@@ -18,8 +18,6 @@ function getPlayerChoice(){
         }
     }
 getPlayerChoice();
-// ...Can't figure out how to test player choice function will continue and just assume it works until we can see down the road with the game function.
-
 // Keep score between player and computer.
     // Tally the player score.
     // Tally the PC score.
@@ -30,7 +28,7 @@ let computerScore = 0;
     // Take the PC choice.
         // Increment score depending on winner.
 function playRound(playerChoice, computerChoice){ 
-    
+    // YOU ARE HERE
 }
 // Play whole game.
     // Repeat round of play five times.
