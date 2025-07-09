@@ -12,34 +12,26 @@ function getComputerChoice(){
     // Convert their input to a valid answer.
         // Assign result to player.
 function getPlayerChoice(){
-    // ...uses while loops, .inLowerCase, and .includes (new concepts) explained as used.
-    let validatedInput = false;
-    while(validatedInput == false){
-        // ...created a loop to ask the question until a valid answer is received.
         const choice = prompt("Rock, Paper, or Scissors?");
-        if(choice == null){
-            continue;
-            // ...Repeat if nothing entered
-        }
-        const choiceInLowerCase = choice.toLowerCase();
-        if(options.includes(choiceInLowerCase)){
-            validatedInput = true;
-            // ... No more loops if they put in a valid answer.
-            return choiceInLowerCase;
+        if(options.includes(choice)){
+            return choice;
         }
     }
-     
-}
 getPlayerChoice();
+// ...Can't figure out how to test player choice function will continue and just assume it works until we can see down the road with the game function.
+
 // Keep score between player and computer.
     // Tally the player score.
     // Tally the PC score.
-
+let humanScore = 0;
+let computerScore = 0;
 // Combine to play one round.
     // Take the player choice.
     // Take the PC choice.
         // Increment score depending on winner.
+function playRound(playerChoice, computerChoice){ 
     
+}
 // Play whole game.
     // Repeat round of play five times.
     // 
