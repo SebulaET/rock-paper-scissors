@@ -28,6 +28,7 @@ function getPlayerChoice(){
             return choiceInLowerCase;
         }
     }
+     
 }
 getPlayerChoice();
 // Keep score between player and computer.
