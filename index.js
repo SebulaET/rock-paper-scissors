@@ -1,92 +1,28 @@
-const options = ["rock", "paper", "scissors"];
-
+// "..." = Hint
+// Establish options.
+const options = ["Rock", "Paper", "Scissors"];
+    // Get random result between rock, paper, and scissors.
+        // Assign result to computer.
 function getComputerChoice(){
-    // Determine the computer's choice for a round.
     const choice = options[Math.floor(Math.random() * options.length)];
-    return choice;
+    // ...Declared a variable "Choice", called the array "Options", plug in floor to round down the random number to an integer, ".length" to get the right number of options
+    
+    console.log(choice);
 }
+getComputerChoice();
+// Ask the player their choice.
+    // Convert their input to a valid answer.
+        // Assign result to player.
 
-  // Get input from player for their choice per round
-    // ask the player for their choice
-    // retain their answer.
-function getPlayerChoice(){
-    let validatedInput = false;
-    while(validatedInput == false){
-        const choice = prompt("Rock, Paper, or Scissors?");
-        if(choice == null){
-            continue;
-        }
-        // convert to lower case
-        const choiceInLower = choice.toLowerCase();
-        // if choiceInLower includes rock/paper/scissors...
-        if(options.includes(choiceInLower)){
-            // change to true
-            validatedInput = true;
-            // return the converted player input
-            return choiceInLower;
-        }
-}
-}
+// Keep score between player and computer.
+    // Tally the player score.
+    // Tally the PC score.
 
-function checkWinner(playerSelection, computerSelection){
-     // Determine a winner.
-    if(playerSelection == computerSelection){
-        return "Tie";   
-    }
-    else if(
-        (playerSelection == "rock" && computerSelection == "scissors") ||
-        (playerSelection == "paper" && computerSelection == "rock") ||
-        (playerSelection == "scissors" && computerSelection == "paper")
-    ){
-        return "Player";
-    }
-    else {
-        return "Computer";
-    }
-}
-
-function playRound(playerSelection, computerSelection){
-    // Have a result for if the player wins.
-    // Have a result for if the computer wins.
-    // Have a result for if it's a tie.
-    const result = checkWinner(playerSelection, computerSelection)
-    if(result == "Tie"){
-        return "It's a tie!"
-    } 
-    else if(result == "Player"){
-        return `You win! ${playerSelection} beats ${computerSelection} :)`
-    }
-    else {
-        return `You lose. ${computerSelection} beats ${playerSelection} :(`
-    }
-}
-
-function game(){
-    let scorePlayer = 0;
-    let scoreComputer = 0;
-    console.log("Let's play!");
-    // loop five times.
-    for (let i = 0; i < 5; i++){
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection,computerSelection));
-    }       
-    if (checkWinner(playerSelection,computerSelection) == "Player"){
-        scorePlayer++
-    }
-    else if (checkWinner(playerSelection,computerSelection) == "Computer"){
-        scoreComputer++
-    }
-    if (scorePlayer > 2) {
-        console.log("You win the game!!");
-    }
-    else if (scoreComputer > 2) {
-        console.log("You lost the game... :(");
-    }
-    else {
-        console.log("Tie...");
-    }
-}
-
-game();
-// Need to figure out determining the winner. Why no score being kept here?
+// Combine to play one round.
+    // Take the player choice.
+    // Take the PC choice.
+        // Increment score depending on winner.
+    
+// Play whole game.
+    // Repeat round of play five times.
+    // 
