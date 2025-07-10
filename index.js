@@ -1,6 +1,6 @@
 // "..." = Hint (not pseudocode just reminders)
 // Establish options.
-const options = ["Rock", "Paper", "Scissors"];
+const options = ["rock", "paper", "scissors"];
     // Get random result between rock, paper, and scissors.
         // Assign result to computer.
 function getComputerChoice(){
@@ -12,9 +12,10 @@ function getComputerChoice(){
     // Convert their input to a valid answer.
         // Assign result to player.
 function getPlayerChoice(){
-        const choice = prompt("Rock, Paper, or Scissors?");
+        let choice = prompt("Rock, Paper, or Scissors?");
+        choice = choice.toLowerCase();
         if(options.includes(choice)){
-            return choice;
+            console.log(choice);
         }
     }
 getPlayerChoice();
@@ -23,13 +24,17 @@ getPlayerChoice();
     // Tally the PC score.
 let humanScore = 0;
 let computerScore = 0;
+const playerSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 // Combine to play one round.
     // Take the player choice.
     // Take the PC choice.
         // Increment score depending on winner.
-function playRound(playerChoice, computerChoice){ 
-    // YOU ARE HERE
+function playRound(playerSelection, computerSelection){ 
+    
 }
+
+playRound(playerSelection, computerSelection);
 // Play whole game.
     // Repeat round of play five times.
     // 
